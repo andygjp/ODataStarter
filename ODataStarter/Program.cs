@@ -11,8 +11,6 @@ builder.Services
     .AddControllers()
     .AddOData(options =>
     {
-        // /api/$metadata
-        // /api/{entityset}
         options.EnableQueryFeatures()
             .AddRouteComponents("api", modelBuilder.GetEdmModel());
     });
@@ -20,7 +18,6 @@ builder.Services
 var app = builder.Build();
 
 app.MapControllers();
-// /$odata
 app.UseODataRouteDebug();
 
 app.MapGet("/", () => "Hello World!");

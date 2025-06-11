@@ -1,0 +1,14 @@
+### hello world
+GET http://localhost:8888
+
+### GET odata routes
+GET http://localhost:8888/$odata
+
+### GET api entity sets
+GET http://localhost:8888/api
+
+### GET api metadata
+GET http://localhost:8888/api/$metadata?$format=json
+
+### GET customers
+GET http://localhost:8888/api/customers
